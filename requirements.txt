@@ -1,2 +1,2 @@
-aiml==0.8.6
-pyttsx==1.1
+aiml
+pyttsx
