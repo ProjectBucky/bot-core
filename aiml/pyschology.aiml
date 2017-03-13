@@ -21,7 +21,7 @@
 <!--  Complies with the AIML 1.0 Standard                               -->
 <!--  as adopted by the ALICE A.I. Foundation.                          -->
 <!--  Last modified 09-18-2016                                          -->
-<!--  file: psychology.aiml                                             -->
+<!--  file: pyschology.aiml                                             -->
 <aiml version="1.0">
   <category>
     <pattern>LET ME ASK YOU A QUESTION *</pattern>
