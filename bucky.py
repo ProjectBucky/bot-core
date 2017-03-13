@@ -1,34 +1,38 @@
-#/etc/bin/env python3
+#/etc/bin/env python2
 import time
 import aiml
-import os
-import time
+from aiml import Kernel
+from os import listdir
+import sys
+
+files = listdir('aiml')
+bot = Kernel()
+for file in files:
+    bot.learn('aiml/'+file)
+
 def botsay(str,end="\n"):
-    print("Bucky :>"str,end="\n")
+    print("Bucky :>"+str)
 
-def readin():
-    return input()
-
-def get_aiml():
-    #for folder in os.listdir():
-    return
+def readin(msg):
+    tempx = str(raw_input(msg))
+    return tempx
         
 def set_alarm(timevar):
     """
-    Sets an alarm
+    Sgets an alarm
     """
-    
     return
     
 def mainfunc():
     botsay("Hello I am Bucky, Your personal asistant...")
     while True:
-        print("You :>")
-        inp = readin()
+        inp = readin("You> ")
         if inp == "what is the time now":
             botsay("The time is " + time.strftime("%I:%M %p"))
             
         else:
-            botsay("Unknown command....")
+            ans = bot.respond(inp)
+            botsay(ans)
+
 if __name__ == "__main__":
-    
+    mainfunc()

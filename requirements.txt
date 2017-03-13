@@ -1,2 +1,4 @@
 aiml
 pyttsx
+SpeechRecognition
+pyaudio
