@@ -1,6 +1,7 @@
 import speech_recognition as sr
 import pyttsx
 import time
+import wolframalpha
 '''
 engine = pyttsx.init()
 engine.say("Your Message")
@@ -16,6 +17,11 @@ def reply(str):
         voice(time.strftime('%X %x %Z'))
     if (str=="who are you"):
         voice("I am Bucky, your personal assitant")
+    else:
+        client = wolframalpha.Client("K9RLXP-GKPWYPR92J")
+        res = client.query('sum of sqaure of 2 and square of  5')
+        voice(next(res.results).text)
+
 
 
 r = sr.Recognizer()
